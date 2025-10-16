@@ -78,13 +78,16 @@ def authenticate_user():
             
             if st.button("Se connecter", type="primary", use_container_width=True):
                 # Simulation d'authentification (remplacer par une vraie authentification)
-                if username and password:
+                if username == "konate.daouda" and password == "DMN":
                     st.session_state.authenticated = True
                     st.session_state.username = username
+                    st.success("Connexion réussie ✅")
                     st.rerun()
                 else:
                     st.error("Veuillez saisir vos identifiants")
-        
+        else:
+        st.sidebar.success(f"Connecté en tant que {st.session_state.username}")
+    
         # Logo SODEXAM (simulation)
         st.markdown("---")
         st.markdown("<center><strong>SODEXAM - Direction de la Météorologie Nationale</strong></center>", unsafe_allow_html=True)
