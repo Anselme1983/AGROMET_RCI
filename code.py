@@ -84,7 +84,7 @@ def authenticate_user():
                     st.success("Connexion réussie ✅")
                     st.rerun()
                 else:
-                    st.error("Veuillez saisir vos identifiants")
+                    st.error("Nom d'utilisateur ou mot de passe incorrect ❌")
         else:
         st.sidebar.success(f"Connecté en tant que {st.session_state.username}")
     
@@ -557,3 +557,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
