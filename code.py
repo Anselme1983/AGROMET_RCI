@@ -85,9 +85,7 @@ def authenticate_user():
                     st.rerun()
                 else:
                     st.error("Nom d'utilisateur ou mot de passe incorrect ❌")
-        else:
-        st.sidebar.success(f"Connecté en tant que {st.session_state.username}")
-    
+          
         # Logo SODEXAM (simulation)
         st.markdown("---")
         st.markdown("<center><strong>SODEXAM - Direction de la Météorologie Nationale</strong></center>", unsafe_allow_html=True)
@@ -557,4 +555,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
